@@ -1,0 +1,8 @@
+Laravel has unique features of having tons command-line tools solely for its Framework. Take an example of php artisan.
+If we run this ```php artisan```` command, it'll display various of inviting command-line, but most notably commands that're widely used:
+
+php artisan serve -> This command is to "serve" that certain Laravel project into development. The host address to serve that application ("after initializing this command") will be http://localhost:8000
+OR http://127.0.0.1:8000. But the default is the latter.. Here's a shown list for artisan serve:
+( php artisan serve --port=PORT_NUMBER ) This changes the default PORT "8000" to your desired amount.. The PORT_NUMBER as the indicator on what'll like to be altered.
+( php artisan serve --host=HOST_NAME ) This alters the HOST_NAME (default: localhost OR 127.0.0.1), same as PORT_NUMBER, the HOST_NAME can be altered to your own choices.
+( php artisan serve --no-reload ) This restricted any reloads / changes when this application is served.. Which only provides view-only.
