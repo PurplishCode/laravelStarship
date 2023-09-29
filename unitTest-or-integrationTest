@@ -1,0 +1,11 @@
+Laravel divides testing into two main categories: Unit Tests and Integration Tests. Laravel leverages PHPUnit as the underlying testing framework to implement these tests.
+
+To use Unit Tests, you can easily create a Unit Test class, which is similar to using PHPUnit itself. This allows you to build a hierarchy of Unit Test classes, for example, extending from "PHPUnit\Framework\TestCase". Unit Tests are valuable when you want to test classes or functions that are not directly related to Laravel and do not depend on Laravel functionality.
+
+However, Laravel also provides pre-made Unit Tests that are designed to work with Laravel's features. These tests are helpful when you want to utilize Laravel functionality to test something. This is where Integration Tests come into play.
+
+Similar to the hierarchy of Unit Test classes, in Integration Testing, you typically begin by declaring "Illuminate\" and then specify its subroot class, for example, "Illuminate\Foundation\Testing\TestCase"
+
+To create any Integration Test. You'll have to type in prompt "php artisan make:test (nameOfTest)", This will constructs newly-made Integration Test within that Test name. The Test resides in "tests\Feature" Folder. And to use this Integration Test, simply call "use Tests\Feature\(IntegrationTestName)". But, to create Unit Test, adds in " --unit", The test (unit) will automatically resides within "tests\Unit" Folder.
+
+To run Unit/Integration Test at once, run "php artisan test" and this will iterates and run each test.
