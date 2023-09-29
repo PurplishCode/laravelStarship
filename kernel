@@ -1,0 +1,8 @@
+In Laravel. There are two distinguish Kernel class. Console Kernel and HTTP Kernel. HTTP Kernel is used to handle any HTTP request.
+While Console Kernel will handles any console request. HTTP Kernel is also part of the class hierarchy for Laravel.
+HTTP Kernel is solely builds on Web-applications foundation. While Console Kernel handles any prompt from our console. In this Laravel documentations however, we'll learn the former.
+
+Kernel receives our request of data. But, instead of HANDLING that data. It handed it over towards our ServiceProvider. Inside of it includes RouteProvider, AuthProvider, lots of it.
+First thing Kernel does, It'll loads / bootstraping our ServiceProvider. Then it'll iterates for each Provider to process our registration of data and bootstraping each the ServiceProvider.
+
+ServiceProvider too plays crucial role and responsibility of bootstraping each our Laravel components, suchas Database, Queue, Routing, Validation, etc.
