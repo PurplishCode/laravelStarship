@@ -1,0 +1,19 @@
+To start:
+php artisan make:seeder tableNameSeeder
+
+use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
+
+
+foreach(range(0,5) as $index) {
+$faker = Faker::create();
+
+DB::table("namaTable")->insert([
+"nama" => $faker->name, // Seeding Name.
+"relatedID" => $faker->randomELement(DB::table("namaTable")->pluck("relatedID")) // Seeding relationships id with coexisting one.
+]);
+}
+
+To execute:
+php artisan db:seed --class=tableNameSeeder
