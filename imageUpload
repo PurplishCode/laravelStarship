@@ -9,7 +9,7 @@ $request->validate([
 $fileRetrive = $request->file("namaFileImage");
 $fileExtension = $fileRetrieve->extension();
 $fileName = date("ymdhis") . "" . $fileExtension;
-$moveFile = move(public_path("public/image", $fileName)); // Store this File Image Name into the public directory, invoke / retrieve the data with object notations.
+$moveFile = move(public_path("public/image", $fileName)); // Store this File Image into the public directory, invoke / retrieve the data with object notations.
 
 $dataKeseluruhan = [
 "titlePhoto" => $request->titlePhoto;
